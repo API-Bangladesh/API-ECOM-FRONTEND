@@ -5,7 +5,7 @@ import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Image from "next/image";
-import BtoBBanner from "public/b2b.jpg";
+import BtoBBanner from "../../public/b2b.jpg";
 import axios from "axios"
 import {makeTitle, tostify} from "../../utils/helpers";
 import {toast} from "react-toastify";
