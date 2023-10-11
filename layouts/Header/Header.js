@@ -142,7 +142,7 @@ export default function Header() {
                   </Link>
                 </NavDropdown.Item>
                 <NavDropdown.Item className="text-capitalize all-icons text-dark px-4 py-2 d-block">
-                  <Link href="/board-of-directors" className="cate-drop">
+                  <Link href="/" className="cate-drop">
                     BOD & Leadership
                   </Link>
                 </NavDropdown.Item>
