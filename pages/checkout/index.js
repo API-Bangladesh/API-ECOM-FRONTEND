@@ -709,7 +709,7 @@ const CheckoutPage = () => {
                         TIN:
                       </b>
                       <p className="text-capitalize text-center pb-2">
-                        117029919179
+                        123 456 789
                       </p>
                     </Col>
                     <Col lg={12} md={12} className="d-flex">
@@ -717,7 +717,7 @@ const CheckoutPage = () => {
                         BIN:
                       </b>
                       <p className="text-capitalize text-center pb-2">
-                        000079132-0403
+                        000-000-000
                       </p>
                     </Col>
                     <Col lg={12} md={12} className="d-flex">
@@ -741,7 +741,7 @@ const CheckoutPage = () => {
                         Acc Name:
                       </b>
                       <p className="text-capitalize text-center pb-2">
-                        Ifad Multi Products Limited
+                        API Limited
                       </p>
                     </Col>
                     <Col lg={12} md={12} className="d-flex">
@@ -749,7 +749,7 @@ const CheckoutPage = () => {
                         Acc No:
                       </b>
                       <p className="text-capitalize text-center pb-2">
-                        00233011222
+                        0123456789
                       </p>
                     </Col>
                   </div>
