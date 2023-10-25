@@ -1,20 +1,34 @@
-import React, {Fragment, useEffect, useState} from "react";
-import {useRouter} from "next/router";
+import React, { Fragment, useEffect, useState } from "react";
+import { useRouter } from "next/router";
 import moment from "moment";
-import {getStoragePath, makeTitle, tostify} from "../../../../utils/helpers";
-import {toast} from "react-toastify";
+import { getStoragePath, makeTitle, tostify } from "../../../../utils/helpers";
+import { toast } from "react-toastify";
 import Button from "react-bootstrap/Button";
-import {AiOutlineMinus, AiOutlinePlus} from "react-icons/ai";
-import {useDispatch, useSelector} from "react-redux";
-import {SET_CART_ITEM} from "../../../../store/slices/CartSlice";
-import {randomInt} from "next/dist/shared/lib/bloom-filter/utils";
+import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
+import { useDispatch, useSelector } from "react-redux";
+import { SET_CART_ITEM } from "../../../../store/slices/CartSlice";
+import { randomInt } from "next/dist/shared/lib/bloom-filter/utils";
 import Timer from "../../../../components/common/Timer";
-import {fetchCombo} from "../../../../services/ComboServices";
+import { fetchCombo } from "../../../../services/ComboServices";
 import ComboImageSection from "../../../../components/combo/ComboImageSection";
 import ComboProductDescription from "../../../../components/combo/ComboProductDescription";
 import Head from "next/head";
+import { MdFavorite } from "react-icons/md";
 
 const SingleComboPage = () => {
+  const [style, setStyle] = useState("add_fav");
+
+  // const favorite=()=>{
+  //   setStyle(
+  //     style === "add_fav" ? "add_fav_color" : "add_fav"
+  //   );
+  // }
+  const favorite = () => {
+    setStyle(
+      style === "add_fav" ? "add_fav_color" : "add_fav"
+    );
+    // alert("hello");
+  };
   const dispatch = useDispatch();
 
   const router = useRouter();
@@ -126,139 +140,163 @@ const SingleComboPage = () => {
   };
 
   return (
-      <Fragment>
-        <Head>
-          <title>{makeTitle(combo?.title || "Combo Product")}</title>
-        </Head>
-    <section className="view-single-pro">
-      {combo?.lifestyle_image && (
-        <div className="product-banner">
-          <img
-            src={
-              combo?.lifestyle_image
-                ? getStoragePath(`combo-life-style/${combo?.lifestyle_image}`)
-                : "/combo-default.jpg"
-            }
-            alt="lifestyle-image"
-            className="product-banner"
-          />
-        </div>
-      )}
-
-      <div className="container">
-        <div className="row">
-          <div className="col-lg-6 col-md-6">
-            <div className="mt-5">
-              <ComboImageSection combo={combo} className="sec-height" />
-            </div>
+    <Fragment>
+      <Head>
+        <title>{makeTitle(combo?.title || "Combo Product")}</title>
+      </Head>
+      <section className="view-single-pro">
+        {combo?.lifestyle_image && (
+          <div className="product-banner">
+            <img
+              src={
+                combo?.lifestyle_image
+                  ? getStoragePath(`combo-life-style/${combo?.lifestyle_image}`)
+                  : "/combo-default.jpg"
+              }
+              alt="lifestyle-image"
+              className="product-banner"
+            />
           </div>
+        )}
 
-          <div className="col-lg-6 col-md-6 ps-5">
-            <div className="border-bottom position-relative">
-              <h3 className="mt-5 color font-jost display-6 fw-bolder text-capitalize mb-3">
-                {combo?.title}
-              </h3>
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-6 col-md-6">
+              <div className="mt-5">
+                <ComboImageSection combo={combo} className="sec-height" />
+              </div>
+            </div>
 
-              {combo && combo.combo_items && combo.combo_items.length > 0 && (
-                <div className="mb-3">
-                  <h2 className="mb-1">Package Items:</h2>
-                  {combo.combo_items.map((item, index) => (
-                    <p key={index}>
-                      {index + 1}. {item?.inventory?.title}{" "}
-                      {item?.quantity ? `(Qty. ${item.quantity})` : ""}
-                    </p>
-                  ))}
-                </div>
-              )}
+            <div className="col-lg-6 col-md-6 ps-5">
+              <div className="border-bottom position-relative">
+                <h3 className="mt-5 color font-jost display-6 fw-bolder text-capitalize mb-3">
+                  {combo?.title}
+                </h3>
 
-              <p className="font-lato font-20 text-dark mb-3">
-                {isRunningOffer ? (
-                  <Fragment>
-                    <del>Price: {combo?.sale_price} Tk.</del>
-                    <br />
-                    Offer Price: {combo?.offer_price} Tk
-                  </Fragment>
-                ) : (
-                  <Fragment>Price: {combo?.sale_price} Tk.</Fragment>
+                {combo && combo.combo_items && combo.combo_items.length > 0 && (
+                  <div className="mb-3">
+                    <h2 className="mb-1">Package Items:</h2>
+                    {combo.combo_items.map((item, index) => (
+                      <p key={index}>
+                        {index + 1}. {item?.inventory?.title}{" "}
+                        {item?.quantity ? `(Qty. ${item.quantity})` : ""}
+                      </p>
+                    ))}
+                  </div>
                 )}
-              </p>
-              {combo?.sale_price && combo?.offer_price && combo?.offer_price < combo?.sale_price && (
-              <div className="single_pro_offer" >
-                <img src="/offer_shape.png" alt="" className="single_pro_offer_img"/>
-                <div className="single_offer_text">
-                  <p className="text-uppercase fw-bold font-16 d-flex justify-content-center text-white m-0 p-0 offer_text_tab">save</p>
-                  <span className="text-white veri-align fw-semibold font-16">
-                    {calculateDiscount(combo?.sale_price, combo?.offer_price)}%
-                  </span>
+
+                <p className="font-lato font-20 text-dark mb-3">
+                  {isRunningOffer ? (
+                    <Fragment>
+                      <del>Price: {combo?.sale_price} Tk.</del>
+                      <br />
+                      Offer Price: {combo?.offer_price} Tk
+                    </Fragment>
+                  ) : (
+                    <Fragment>Price: {combo?.sale_price} Tk.</Fragment>
+                  )}
+                </p>
+                {combo?.sale_price &&
+                  combo?.offer_price &&
+                  combo?.offer_price < combo?.sale_price && (
+                    <div className="single_pro_offer">
+                      <img
+                        src="/offer_shape.png"
+                        alt=""
+                        className="single_pro_offer_img"
+                      />
+                      <div className="single_offer_text">
+                        <p className="text-uppercase fw-bold font-16 d-flex justify-content-center text-white m-0 p-0 offer_text_tab">
+                          save
+                        </p>
+                        <span className="text-white veri-align fw-semibold font-16">
+                          {calculateDiscount(
+                            combo?.sale_price,
+                            combo?.offer_price
+                          )}
+                          %
+                        </span>
+                      </div>
+                    </div>
+                  )}
+              </div>
+
+              <div className="d-flex justify-content-start align-items-center counter mt-3">
+                <p className="text-capitalize pe-3 font-lato">quantity :</p>
+
+                <div className="d-flex justify-content-between align-items-center border border-secondary rounded-0 counter">
+                  <Button
+                    onClick={(event) => decQuantity(event)}
+                    className="button-two border-0 ms-2"
+                  >
+                    <AiOutlineMinus className="text-dark minus-icon" />
+                  </Button>
+
+                  <h2 className="px-4 font-14 count-padding">{quantity}</h2>
+
+                  <Button
+                    onClick={(event) => incQuantity(event)}
+                    className="button-one border-0 me-2"
+                  >
+                    <AiOutlinePlus className="text-dark plus-icon" />
+                  </Button>
                 </div>
               </div>
+              <div className="d-flex justify-content-start counter mt-4 mb-4">
+                <div className="ms-2">
+                  <button
+                    type="button"
+                    className={`btn btn-success  rounded-0 text-capitalize font-lato add_fav ${style}`}
+                    onClick={favorite}
+                  >
+                  <MdFavorite
+                    size={"24px"}
+                    
+                  />
+                  </button>
+                </div>
+                <div className="ms-2">
+                  <button
+                    type="button"
+                    className="btn btn-success buy-btn rounded-0 text-capitalize px-4 font-lato"
+                    onClick={(event) => handleAddToCart(event, combo, true)}
+                  >
+                    buy now
+                  </button>
+                </div>
+                <div className="ms-2">
+                  <button
+                    type="button"
+                    className="btn btn-warning buy-btn2 rounded-0 text-capitalize px-4 font-lato"
+                    onClick={(event) => handleAddToCart(event, combo)}
+                  >
+                    add to cart
+                  </button>
+                </div>
+              </div>
+
+              {/*Timer*/}
+              {isRunningOffer && combo?.offer_end && (
+                <div className="offer-countdown mb-4">
+                  <div className="fs-6 mb-1">Hurry up! Offer is ongoing.</div>
+                  <div
+                    className="fs-2 fw-light border-2 border-warning d-inline-block px-3 py-2 text-center"
+                    style={{
+                      padding: "10px 0 0",
+                      textAlign: "left",
+                      fontWeight: "bold",
+                    }}
+                  >
+                    <Timer startDate={null} endDate={combo?.offer_end} />
+                  </div>
+                </div>
               )}
             </div>
-
-            <div className="d-flex justify-content-start align-items-center counter mt-3">
-              <p className="text-capitalize pe-3 font-lato">quantity :</p>
-
-              <div className="d-flex justify-content-between align-items-center border border-secondary rounded-0 counter">
-                <Button
-                  onClick={(event) => decQuantity(event)}
-                  className="button-two border-0 ms-2"
-                >
-                  <AiOutlineMinus className="text-dark minus-icon" />
-                </Button>
-
-                <h2 className="px-4 font-14 count-padding">{quantity}</h2>
-
-                <Button
-                  onClick={(event) => incQuantity(event)}
-                  className="button-one border-0 me-2"
-                >
-                  <AiOutlinePlus className="text-dark plus-icon" />
-                </Button>
-              </div>
-            </div>
-            <div className="d-flex justify-content-start counter mt-4 mb-4">
-              <div className="ms-2">
-                <button
-                  type="button"
-                  className="btn btn-success buy-btn rounded-0 text-capitalize px-4 font-lato"
-                  onClick={(event) => handleAddToCart(event, combo, true)}
-                >
-                  buy now
-                </button>
-              </div>
-              <div className="ms-2">
-                <button
-                  type="button"
-                  className="btn btn-warning buy-btn2 rounded-0 text-capitalize px-4 font-lato"
-                  onClick={(event) => handleAddToCart(event, combo)}
-                >
-                  add to cart
-                </button>
-              </div>
-            </div>
-
-            {/*Timer*/}
-            {isRunningOffer && combo?.offer_end && (
-              <div className="offer-countdown mb-4">
-                <div className="fs-6 mb-1">Hurry up! Offer is ongoing.</div>
-                <div
-                  className="fs-2 fw-light border-2 border-warning d-inline-block px-3 py-2 text-center"
-                  style={{
-                    padding: "10px 0 0",
-                    textAlign: "left",
-                    fontWeight: "bold",
-                  }}
-                >
-                  <Timer startDate={null} endDate={combo?.offer_end} />
-                </div>
-              </div>
-            )}
+            <ComboProductDescription combo={combo} className="mb-5 tabs" />
           </div>
-          <ComboProductDescription combo={combo} className="mb-5 tabs" />
         </div>
-      </div>
-    </section>
-      </Fragment>
+      </section>
+    </Fragment>
   );
 };
 

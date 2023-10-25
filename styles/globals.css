@@ -1625,7 +1625,13 @@ product part css start
 .counter .button-two:hover {
   background: #ffa500 !important;
 }
-
+.add_fav{
+  color: #444!important;
+  background-color: transparent!important;
+}
+.add_fav_color{
+  color: red!important;
+}
 .buy-btn {
   color: #333 !important;
   transition: all linear 0.3s;

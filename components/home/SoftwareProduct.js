@@ -3,8 +3,10 @@ import Link from "next/link";
 import { fetchDiscountedInventories } from "../../services/InventoryServices";
 import { Container, Card } from "react-bootstrap";
 import Slider from "react-slick";
+// import { MdFavorite } from "react-icons/md";
+import { Navigate } from "react-router-dom";
 
-const SoftwareProduct = ({title, categoryId}) => {
+const SoftwareProduct = ({ title, categoryId }) => {
   const [inventories, setInventories] = useState([]);
 
   // fetch
@@ -21,7 +23,7 @@ const SoftwareProduct = ({title, categoryId}) => {
     dots: true,
     infinite: true,
     speed: 1000,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 3000,
     slidesToShow: 5,
     slidesToScroll: 1,
@@ -52,18 +54,51 @@ const SoftwareProduct = ({title, categoryId}) => {
       },
     ],
   };
+
+  const mn = () => {
+    Navigate("./delivery-information");
+  };
   return (
     <>
       <section className="combo-pack mt-4">
         {/*Title Bar*/}
         <div className="container p-0">
           <h1 className="font-40 text-capitalize font-inter py-3 fw-bold border-bottom mb-3">
-            Software Product 
+            Software Product
           </h1>
         </div>
         {/*Scroll View*/}
         <Container>
           <Slider {...settings}>
+            <div className="featured_product">
+              <Link href={`/category/${categoryId}`}>
+                <Card className="featured_product_style rounded-2 my-3 mx-2">
+                  <div className="d-flex justify-content-center">
+                    <img
+                      src="/soft/1.png"
+                      width={224}
+                      height={172}
+                      className="featured_Pro_img py-2 img-fluid p-3 pt-4"
+                      alt=""
+                    />
+                    {/* <div className="">
+                      <MdFavorite onClick={} />
+                    </div> */}
+                  </div>
+                  <Card.Body className="prod-card-body position-relative ps-0">
+                    <Card.Title className="text-center ps-0 text-capitalize font-18">
+                      <Link href="" className="prod-title">
+                        Product
+                      </Link>
+                    </Card.Title>
+
+                    <Card.Text className="text-center pb-3 text-capitalize">
+                      Price: 2314 Tk.
+                    </Card.Text>
+                  </Card.Body>
+                </Card>
+              </Link>
+            </div>
             <div className="featured_product">
               <Link href={`/category/${categoryId}`}>
                 <Card className="featured_product_style rounded-2 my-3 mx-2">
@@ -94,7 +129,7 @@ const SoftwareProduct = ({title, categoryId}) => {
               <Link href={`/category/${categoryId}`}>
                 <Card className="featured_product_style rounded-2 my-3 mx-2">
                   <div className="d-flex justify-content-center">
-                  <img
+                    <img
                       src="/soft/1.png"
                       width={224}
                       height={172}
@@ -120,7 +155,7 @@ const SoftwareProduct = ({title, categoryId}) => {
               <Link href={`/category/${categoryId}`}>
                 <Card className="featured_product_style rounded-2 my-3 mx-2">
                   <div className="d-flex justify-content-center">
-                  <img
+                    <img
                       src="/soft/1.png"
                       width={224}
                       height={172}
@@ -146,7 +181,7 @@ const SoftwareProduct = ({title, categoryId}) => {
               <Link href={`/category/${categoryId}`}>
                 <Card className="featured_product_style rounded-2 my-3 mx-2">
                   <div className="d-flex justify-content-center">
-                  <img
+                    <img
                       src="/soft/1.png"
                       width={224}
                       height={172}
@@ -172,7 +207,7 @@ const SoftwareProduct = ({title, categoryId}) => {
               <Link href={`/category/${categoryId}`}>
                 <Card className="featured_product_style rounded-2 my-3 mx-2">
                   <div className="d-flex justify-content-center">
-                  <img
+                    <img
                       src="/soft/1.png"
                       width={224}
                       height={172}
@@ -198,7 +233,7 @@ const SoftwareProduct = ({title, categoryId}) => {
               <Link href={`/category/${categoryId}`}>
                 <Card className="featured_product_style rounded-2 my-3 mx-2">
                   <div className="d-flex justify-content-center">
-                  <img
+                    <img
                       src="/soft/1.png"
                       width={224}
                       height={172}
@@ -224,33 +259,7 @@ const SoftwareProduct = ({title, categoryId}) => {
               <Link href={`/category/${categoryId}`}>
                 <Card className="featured_product_style rounded-2 my-3 mx-2">
                   <div className="d-flex justify-content-center">
-                  <img
-                      src="/soft/1.png"
-                      width={224}
-                      height={172}
-                      className="featured_Pro_img py-2 img-fluid p-3 pt-4"
-                      alt=""
-                    />
-                  </div>
-                  <Card.Body className="prod-card-body position-relative ps-0">
-                    <Card.Title className="text-center ps-0 text-capitalize font-18">
-                      <Link href="" className="prod-title">
-                        Product
-                      </Link>
-                    </Card.Title>
-
-                    <Card.Text className="text-center pb-3 text-capitalize">
-                      Price: 2314 Tk.
-                    </Card.Text>
-                  </Card.Body>
-                </Card>
-              </Link>
-            </div>
-            <div className="featured_product">
-              <Link href={`/category/${categoryId}`}>
-                <Card className="featured_product_style rounded-2 my-3 mx-2">
-                  <div className="d-flex justify-content-center">
-                  <img
+                    <img
                       src="/soft/1.png"
                       width={224}
                       height={172}

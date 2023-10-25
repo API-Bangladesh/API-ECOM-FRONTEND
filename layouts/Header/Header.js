@@ -126,8 +126,15 @@ export default function Header() {
               >
                 home
               </Nav.Link>
+              <Nav.Link
+                as={Link}
+                href="/company-profile"
+                className="d-flex align-items-center all-side-icons font-16 fw-semibold my-2"
+              >
+                about us
+              </Nav.Link>
 
-              <NavDropdown
+              {/* <NavDropdown
                 className="p-0 rounded-0 about-btn"
                 title={
                   <span className=" text-inter py-2 font-16 fw-semibold d-flex all-side-icons align-items-center">
@@ -142,11 +149,11 @@ export default function Header() {
                   </Link>
                 </NavDropdown.Item>
                 <NavDropdown.Item className="text-capitalize all-icons text-dark px-4 py-2 d-block">
-                  <Link href="/" className="cate-drop">
+                  <Link href="/board-of-directors" className="cate-drop">
                     BOD & Leadership
                   </Link>
                 </NavDropdown.Item>
-              </NavDropdown>
+              </NavDropdown> */}
 
               <Nav.Link
                 as={Link}

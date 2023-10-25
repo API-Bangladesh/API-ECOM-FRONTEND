@@ -1,19 +1,6 @@
 import Image from "next/image";
 import Row from "react-bootstrap/Row";
 import Directors from "../../public/bod/Banner.png";
-import Chairman from "../../public/bod/chairman.jpg";
-import Chairman2 from "../../public/bod/chairman2.png";
-import Chairman3 from "../../public/bod/chairman3.png";
-import Chairman4 from "../../public/bod/chairman4.jpg";
-import Chairman5 from "../../public/bod/chairman5.png";
-import Leader from "../../public/bod/leader.jpg";
-import TeamOne from "../../public/bod/teamone.jpg";
-import TeamTwo from "../../public/bod/teamtwo.jpg";
-import TeamThree from "../../public/bod/teamthree.jpg";
-import TeamFour from "../../public/bod/teamfour.jpg";
-import TeamSix from "../../public/bod/teamsix.png";
-import TeamSeven from "../../public/bod/teamseven.jpg";
-import TeamEight from "../../public/bod/teameight.jpg";
 import Head from "next/head";
 import { makeTitle } from "../../utils/helpers";
 import React, { Fragment } from "react";
@@ -37,8 +24,8 @@ const BoardOfDirectors = () => {
             <Row className="d-flex justify-content-md-center">
               <div className="col-lg-4 col-md-4 mb-4">
                 <div className="text-center">
-                  <Image
-                    src={Chairman}
+                  <img
+                    src="/bod/bod_men.png"
                     alt=""
                     className="rounded-pill chairman-img"
                   />
@@ -46,14 +33,14 @@ const BoardOfDirectors = () => {
                     Iftekhar Ahmed Tipu
                   </h2>
                   <p className="about_titledesign position-relative pt-2">
-                    Chairman, IFAD Group
+                    Chairman, API
                   </p>
                 </div>
               </div>
               <div className="col-lg-4 col-md-4 mb-4">
                 <div className="text-center">
-                  <Image
-                    src={Chairman2}
+                  <img
+                    src="/bod/bod_lady.png"
                     alt=""
                     className="rounded-pill chairman-img"
                   />
@@ -61,7 +48,7 @@ const BoardOfDirectors = () => {
                     Mrs. Nilufar Ahmed
                   </h2>
                   <p className="about_titledesign position-relative pt-2">
-                    Director, IFAD Group
+                    Director, API 
                   </p>
                 </div>
               </div>
@@ -70,40 +57,40 @@ const BoardOfDirectors = () => {
           <div className="row d-flex justify-content-evenly">
             <div className="col-lg-4 col-md-4 mb-4">
               <div className="text-center">
-                <Image
-                  src={Chairman3}
+                <img
+                  src="/bod/bod_men.png"
                   alt=""
                   className="rounded-pill chairman-img"
                 />
                 <h2 className="font-20 fw-bold pt-2 pb-2">Tanveer Ahmed</h2>
                 <p className="about_titledesign position-relative pt-2">
-                  Group Vice Chairman (i)
+                   Vice Chairman (i)
                 </p>
               </div>
             </div>
             <div className="col-lg-4 col-md-4 mb-4">
               <div className="text-center">
-                <Image
-                  src={Chairman4}
+                <img
+                src="/bod/bod_men.png"
                   alt=""
                   className="rounded-pill chairman-img"
                 />
                 <h2 className="font-20 fw-bold pt-2 pb-2">Taskeen Ahmed</h2>
                 <p className="about_titledesign position-relative pt-2">
-                  Group Vice Chairman (ii)
+                   Vice Chairman (ii)
                 </p>
               </div>
             </div>
             <div className="col-lg-4 col-md-4 mb-4">
               <div className="text-center">
-                <Image
-                  src={Chairman5}
+                <img
+                src="/bod/bod_men.png"
                   alt=""
                   className="rounded-pill chairman-img"
                 />
                 <h2 className="font-20 fw-bold pt-2 pb-2">Tashfeen Ahmed</h2>
                 <p className="about_titledesign position-relative pt-2">
-                  Group Vice Chairman (iii)
+                   Vice Chairman (iii)
                 </p>
               </div>
             </div>
@@ -115,8 +102,8 @@ const BoardOfDirectors = () => {
           <div className="d-flex justify-content-center">
             <div className="col-lg-4 col-md-4 mb-4">
               <div className="text-center">
-                <Image
-                  src={Leader}
+                <img
+                src="/bod/bod_leader.png"
                   alt=""
                   className="rounded leadership-team"
                 />
@@ -124,29 +111,29 @@ const BoardOfDirectors = () => {
                   Reazul Haque Chowdhury
                 </h2>
                 <p className="position-relative pt-1">
-                  Group Managing Director
+                   Managing Director
                 </p>
               </div>
             </div>
           </div>
           <div className="row">
-            <div className="col-lg-3 col-md-3 col-sm-6 mb-4">
+            {/* <div className="col-lg-3 col-md-3 col-sm-6 mb-4">
               <div className="text-center">
-                <Image
-                  src={TeamOne}
+                <img
+                src="/bod/bod_lady.png"
                   alt=""
                   className="rounded new-team-member"
                 />
                 <h2 className="font-20 fw-bold pt-2 pb-1">Shejuti A. Ahmed</h2>
                 <p className="position-relative pt-1">
-                  Group Human Resource Director
+                   Human Resource Director
                 </p>
               </div>
-            </div>
+            </div> */}
             <div className="col-lg-3 col-md-3 col-sm-6 mb-4">
               <div className="text-center">
-                <Image
-                  src={TeamTwo}
+                <img
+                src="/bod/bod_leader.png"
                   alt=""
                   className="rounded new-team-member"
                 />
@@ -158,21 +145,21 @@ const BoardOfDirectors = () => {
             </div>
             <div className="col-lg-3 col-md-3 col-sm-6 mb-4">
               <div className="text-center">
-                <Image
-                  src={TeamThree}
+                <img
+                src="/bod/bod_leader.png"
                   alt=""
                   className="rounded new-team-member"
                 />
                 <h2 className="font-20 fw-bold pt-2 pb-1">
                   Syed Mohammed Sibgat Ullah
                 </h2>
-                <p className="pt-1">Group Head of Supply Chain Management</p>
+                <p className="pt-1"> Head of Supply Chain Management</p>
               </div>
             </div>
             <div className="col-lg-3 col-md-3 col-sm-6 mb-4">
               <div className="text-center">
-                <Image
-                  src={TeamFour}
+                <img
+                src="/bod/bod_leader.png"
                   alt=""
                   className="rounded new-team-member"
                 />
@@ -185,8 +172,8 @@ const BoardOfDirectors = () => {
 
             <div className="col-lg-3 col-md-3 col-sm-6 mb-4">
               <div className="text-center">
-                <Image
-                  src={TeamSix}
+                <img
+                src="/bod/bod_leader.png"
                   alt=""
                   className="rounded new-team-member"
                 />
@@ -199,8 +186,8 @@ const BoardOfDirectors = () => {
 
             <div className="col-lg-3 col-md-3 col-sm-6 mb-4">
               <div className="text-center">
-                <Image
-                  src={TeamSeven}
+                <img
+                src="/bod/bod_leader.png"
                   alt=""
                   className="rounded new-team-member"
                 />
@@ -212,15 +199,15 @@ const BoardOfDirectors = () => {
             </div>
             <div className="col-lg-3 col-md-3 col-sm-6 mb-4">
               <div className="text-center">
-                <Image
-                  src={TeamEight}
+                <img
+                src="/bod/bod_leader.png"
                   alt=""
                   className="rounded new-team-member"
                 />
                 <h2 className="font-20 fw-bold pt-2 pb-1">
                   Md. Habibur Rahman
                 </h2>
-                <p className="pt-1">Group Head of Information Technology</p>
+                <p className="pt-1"> Head of Information Technology</p>
               </div>
             </div>
           </div>
