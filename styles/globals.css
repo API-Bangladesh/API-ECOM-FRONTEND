@@ -879,8 +879,8 @@ banner css starts
   width: 100%;
 }
 .combo_img_bg {
-  height: 100%;
-  width: 100%;
+  height: 180px!important;
+  width: 180px!important;
   object-fit: contain;
 }
 /* .combo-img-bg a {
@@ -1603,7 +1603,7 @@ product part css start
 }
 
 .counter .button-one:hover {
-  background: #ffa500 !important;
+  background: #1B4989 !important;
 }
 
 .counter .minus-icon {
@@ -1623,7 +1623,7 @@ product part css start
 }
 
 .counter .button-two:hover {
-  background: #ffa500 !important;
+  background: #1B4989 !important;
 }
 .add_fav{
   color: #444!important;
