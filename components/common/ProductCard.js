@@ -116,21 +116,21 @@ const ProductCard = ({
           </Card>
         </Link>
       </div> */}
-      <Card className={`c-shadow rounded-0 ${cssClasses}`}>
-        <div className="combo-img-bg position-relative">
-          <Link href={viewLink}>
+      <Card className={`c-shadow border rounded-2 rounded-0 ${cssClasses}`}>
+        <div className="combo-img-bg rounded-3 position-relative">
+          <Link href={viewLink} className="d-flex justify-content-center">
             <img
               src={imagePath}
               width={224}
               height={172}
-              className="card-img-top mt-4 mb-4"
+              className="card-img-top my-4"
               alt={title}
             />
           </Link>
           {salePrice && offerPrice && salePrice > offerPrice ? (
             <div className="position-absolute offer-token text-center">
               <span className="text-white veri-align fw-semibold font-14 pt-2">
-                -{calculateDiscount(salePrice, offerPrice)}%
+                {calculateDiscount(salePrice, offerPrice)}%
               </span>
             </div>
           ) : (
@@ -144,7 +144,7 @@ const ProductCard = ({
             </Link>
           </Card.Title>
 
-          {isRunningOffer ? (
+          {/* {isRunningOffer ? (
             <Fragment>
               <del>
                 <Card.Text className="text-center text-capitalize">
@@ -155,14 +155,14 @@ const ProductCard = ({
                 offer Price: {offerPrice} Tk.
               </Card.Text>
             </Fragment>
-          ) : (
+          ) : ( */}
             <Card.Text className="text-center pb-2 text-capitalize">
-              <br />
+              {/* <br /> */}
               Price: {salePrice} Tk.
             </Card.Text>
-          )}
+          {/* )} */}
 
-          {variants && (
+          {/* {variants && (
             <Card.Text className="text-center pb-2 text-capitalize">
               {variants.map((item, index) => (
                 <Fragment key={index}>
@@ -171,9 +171,9 @@ const ProductCard = ({
                 </Fragment>
               ))}
             </Card.Text>
-          )}
+          )} */}
 
-          <div className="d-flex justify-content-center">
+          {/* <div className="d-flex justify-content-center">
             <button
               type="button"
               className="btn btn-success buy-now rounded-0 text-capitalize px-2 font-14 me-2 font-lato"
@@ -188,7 +188,7 @@ const ProductCard = ({
             >
               add to cart
             </button>
-          </div>
+          </div> */}
           {/* {isTimer && isRunningOffer && (
                     <div style={{padding: "10px 0 0", textAlign: "center", fontWeight: "bold"}}>
                         <Timer startDate={offerStart} endDate={offerEnd} />

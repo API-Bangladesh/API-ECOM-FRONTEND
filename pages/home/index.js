@@ -14,8 +14,8 @@ import DeliveryServices from "../../components/Modules/deliveryServices/Delivery
 import { makeTitle } from "../../utils/helpers";
 import Head from "next/head";
 import UpComingProduct from "../../components/upcomingproduct/UpComingProduct";
-import FeatureProduct from "../../components/home/FeatureProduct";
-import SoftwareProduct from "../../components/home/SoftwareProduct";
+// import FeatureProduct from "../../components/home/FeatureProduct";
+// import SoftwareProduct from "../../components/home/SoftwareProduct";
 
 const HomePage = () => {
   const [categories, setCategories] = useState([]);
@@ -55,7 +55,7 @@ const HomePage = () => {
       <CategoryShowcase />
       <UpComingProduct />
 
-      <FeatureProduct />
+      {/* <FeatureProduct /> */}
 
       {/* {banners && banners.length ? (
         <AddBanner imagePath={banners?.[0]?.item_image} />
@@ -87,13 +87,9 @@ const HomePage = () => {
           />
         );
       })}
-      
-      <SoftwareProduct />
 
-      
-     
-      
-     
+      {/* <SoftwareProduct /> */}
+
       <BrandSection />
       {/* <FeatureSection/> */}
 

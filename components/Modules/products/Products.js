@@ -52,13 +52,13 @@ const ProductPage= ({categoryId}) => {
 
 						{/*Categories*/}
 						<div className="col-lg-3 col-md-4 col-sm-4">
-							<ul className="stickyContent list-unstyled text-start ps-5 font-20 lh-lg card-border py-3 ">
+							<ul className=" list-unstyled text-start ps-5 font-20 lh-lg card-border py-3 ">
 								{categories?.map((item, key) => (
-									<li key={key}>
+									<li key={key} >
 										<Link href={`/category/${item.id}`}>
 											<button className="d-flex category-btn">
 												<IoIosArrowRoundForward className="icon-space me-2"/>
-												<span> {item.name}</span>
+												<span className="text-capitalize"> {item.name}</span>
 											</button>
 										</Link>
 									</li>
