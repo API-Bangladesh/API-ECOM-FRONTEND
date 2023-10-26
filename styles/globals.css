@@ -908,7 +908,9 @@ banner css starts
   transform: unset;
   border-radius: 0;
 } */
-
+.combo-pack .slick-list{
+  height: 290px;
+}
 .product-bg {
   background: #fef5ee;
 }
@@ -928,12 +930,16 @@ banner css starts
 }
 
 .card-img-top {
-  max-width: 180px !important;
-  max-height: 135px;
-  margin-left: 50%;
-  transform: translate(-50%);
+  width: auto !important;
+  height: 140px!important;
+  /* margin-left: 50%;
+  transform: translate(-50%); */
+  object-fit: contain;
+  transition: all linear 0.3s;
 }
-
+.card-img-top:hover{
+  transform: scale(1.1);
+}
 .combo-pack .slick-dots {
   display: none !important;
 }
