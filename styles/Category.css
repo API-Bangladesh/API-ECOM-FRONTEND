@@ -4,8 +4,8 @@
   border: 1px solid var(--theme-color);
 }
 .category_one .category_img{
- max-height: 150px;
- max-width: 150px;
+ height: 150px;
+ width: 150px;
 }
 .category_one .category_img:hover{
  transform: scale(1.0);

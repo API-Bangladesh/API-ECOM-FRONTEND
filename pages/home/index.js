@@ -78,6 +78,16 @@ const HomePage = () => {
       ) : (
         ""
       )} */}
+      {categories.map((category, key) => {
+        return (
+          <CategoryProductScroll
+            key={key}
+            title={category.name}
+            categoryId={category.id}
+          />
+        );
+      })}
+      
       <SoftwareProduct />
 
       
