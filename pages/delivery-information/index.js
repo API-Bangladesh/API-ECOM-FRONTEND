@@ -46,7 +46,6 @@ const DeliverInformationPage = () => {
                                 <h1 className="text-capitalize text-center font-jost font-30 fw-bold py-4">
                                     {item?.item_name}
                                 </h1>
-                                <Image src={DeliveryTNC} alt="" className="img"/>
                                 <div className="d-flex justify-content-center ">
                                     <p className="text-capitalize font-16 font-inter delivery-para pb-5">
                                         {item?.item_short_desc}
