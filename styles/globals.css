@@ -931,7 +931,7 @@ banner css starts
 
 .card-img-top {
   width: auto !important;
-  height: 140px!important;
+  height: 140px!important;   
   /* margin-left: 50%;
   transform: translate(-50%); */
   object-fit: contain;
