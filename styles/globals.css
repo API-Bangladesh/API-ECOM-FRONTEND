@@ -1096,6 +1096,9 @@ banner css starts
   font-size: 18px;
   margin-top: -10px !important;
 }
+ul.mb-3.border-0.nav.nav-tabs {
+  margin-top: 40px!important;
+}
 /*===============
  combo-pack css ends
 =================*/

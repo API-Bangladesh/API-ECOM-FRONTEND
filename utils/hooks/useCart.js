@@ -78,7 +78,7 @@ export const useCart = (initialValue) => {
 
         cart.items.forEach((item) => {
             if (item.hasOwnProperty("type") && item["type"] === "combo") {
-                item.items.forEach((i) => {
+                item?.items?.map((i) => {
                     // console.log(i);
                     const obj = {
                         variant_quantity:
