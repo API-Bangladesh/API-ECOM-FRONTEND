@@ -162,7 +162,8 @@ overlay part start
 }
 
 .overlay-content-itema:hover {
-  color: #f38120 !important;
+  font-weight: 600;
+  color: var(--theme-color) !important; 
 }
 
 /* Style the open button */
@@ -858,7 +859,11 @@ banner css starts
   color: #555;
   transition: all linear 0.3s;
 }
-
+.combo_card_height{
+height: 350px;
+padding-left: 10px;
+padding-right: 10px;
+}
 .combo-btn:hover {
   background-color: #f38120 !important;
   color: white;
@@ -2039,7 +2044,7 @@ how to but part css start
 
 .contact-form-focus:focus {
   box-shadow: none !important;
-  border-color: #f38120 !important;
+  border-color: var(--theme-color) !important;
 }
 
 .contact-form-btn {
@@ -2050,7 +2055,7 @@ how to but part css start
 
 .contact-form-btn:hover {
   color: #fff !important;
-  background: #f38120 !important;
+  background: var(--theme-color) !important;
 }
 
 /*=======================

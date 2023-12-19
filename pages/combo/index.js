@@ -107,6 +107,7 @@ const ComboPage = () => {
                                 {combos.map((combo, key) => {
                                     return (
                                         <div className="col-lg-4 col-md-6 text-center mb-4" key={key}>
+                                            <div className='border rounded-1 combo_card_height'>
                                             <ComboProductCard
                                                 id={combo.id}
                                                 title={combo.title}
@@ -123,6 +124,7 @@ const ComboPage = () => {
                                                 isTimer={true}
                                                 items={combo.combo_items}
                                             />
+                                            </div>
                                         </div>
                                     )
                                 })}

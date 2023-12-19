@@ -220,8 +220,9 @@ export default function Header() {
         </Container>
 
         <section className="btn-hover">
+          <Container>
           <Navbar expand="md" className="py-2">
-            <Container className="px-0" fluid>
+            <Container className="px-0 respon_icon" fluid>
               <Col lg={3} className="">
                 <div className="d-flex justify-content-center manu_drop">
                   <NavDropdown
@@ -283,7 +284,7 @@ export default function Header() {
                       </Button>
                     </Form>
                   </div>
-                  <div className="d-flex ">
+                  <div className="d-flex cart_icons_all">
                     <div className="ps-2 pt-2">
                       <Link href="/">
                         <div className="d-flex">
@@ -303,6 +304,7 @@ export default function Header() {
               </div>
             </Container>
           </Navbar>
+          </Container>
         </section>
 
         {/* for responsive screen */}

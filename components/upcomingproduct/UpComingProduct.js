@@ -7,7 +7,7 @@ const UpComingProduct = () => {
     dots: false,
     infinite: true,
     speed: 2000,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 3000,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -39,68 +39,107 @@ const UpComingProduct = () => {
   };
   return (
     <>
-      <section>
+      <section className="mt-5">
         <Container className="upcoming_slider rounded-3 mb-5">
-          <Col lg={11} className="update_product">
+          <Col lg={11} md={12} className="update_product">
             <Slider {...settings}>
-              
-              <div className="d-flex ">
-                <Col
-                  lg={4}
-                  className="d-flex justify-content-center align-items-center"
-                >
-                  <div>
-                    <p className="font-40 text-capitalize fw-semibold">drone mini</p>
-                    <p className="font-14 text-uppercase mb-3">with 1 hour flight time</p>
-                    <p className="font-14 text-uppercase">starting at</p>
-                    <p className="font-30 text-uppercase  fw-semibold">$50.00</p>
-                  </div>
-                </Col>
-                <Col lg={8} className="d-flex justify-content-center">
-                  <div className="mt-5">
-                    <img src="/drone1.png" alt="" className="up_pro_img" />
-                  </div>
-                </Col>
+              <div>
+                <div className="row ">
+                  <Col
+                    lg={4}
+                    md={4}
+                    sm={12}
+                    className="d-flex justify-content-center align-items-center"
+                  >
+                    <div>
+                      <p className="font-40 text-capitalize fw-semibold upcoming_title">
+                        drone mini
+                      </p>
+                      <p className="font-14 text-uppercase mb-3">
+                        with 1 hour flight time
+                      </p>
+                      <p className="font-14 text-uppercase">starting at</p>
+                      <p className="font-30 text-uppercase  fw-semibold">
+                        $50.00
+                      </p>
+                    </div>
+                  </Col>
+                  <Col
+                    lg={8}
+                    md={8}
+                    sm={12}
+                    className="d-flex justify-content-center"
+                  >
+                    <div className="mt-5">
+                      <img src="/drone1.png" alt="" className="up_pro_img" />
+                    </div>
+                  </Col>
+                </div>
               </div>
-              <div className="d-flex ">
+              <div>
+                <div className="row ">
+                  <Col
+                    lg={4}
+                    md={4}
+                    sm={12}
+                    className="d-flex justify-content-center align-items-center"
+                  >
+                    <div>
+                      <p className="font-40 text-capitalize fw-semibold">
+                        drone mini
+                      </p>
+                      <p className="font-14 text-uppercase mb-3">
+                        with 1 hour flight time
+                      </p>
+                      <p className="font-14 text-uppercase">starting at</p>
+                      <p className="font-30 text-uppercase  fw-semibold">
+                        $50.00
+                      </p>
+                    </div>
+                  </Col>
+                  <Col
+                    lg={8}
+                    md={8}
+                    sm={12}
+                    className="d-flex justify-content-center"
+                  >
+                    <div className="mt-5">
+                      <img src="/drone1.png" alt="" className="up_pro_img" />
+                    </div>
+                  </Col>
+                </div>
+              </div>
+              {/* <div className="row ">
                 <Col
                   lg={4}
+                  md={4}
+                  sm={4}
                   className="d-flex justify-content-center align-items-center"
                 >
                   <div>
-                    <p className="font-40 text-capitalize fw-semibold">drone mini</p>
-                    <p className="font-14 text-uppercase mb-3">with 1 hour flight time</p>
+                    <p className="font-40 text-capitalize fw-semibold">
+                      drone mini
+                    </p>
+                    <p className="font-14 text-uppercase mb-3">
+                      with 1 hour flight time
+                    </p>
                     <p className="font-14 text-uppercase">starting at</p>
-                    <p className="font-30 text-uppercase  fw-semibold">$500.00</p>
+                    <p className="font-30 text-uppercase  fw-semibold">
+                      $50.00
+                    </p>
                   </div>
                 </Col>
                 <Col
                   lg={8}
-                  className="d-flex justify-content-center align-items-center"
+                  md={8}
+                  sm={8}
+                  className="d-flex justify-content-center"
                 >
-                  <div className="mt-5">
-                    <img src="/drone.png" alt="" className="up_pro_img" />
-                  </div>
-                </Col>
-              </div>
-              <div className="d-flex ">
-                <Col
-                  lg={4}
-                  className="d-flex justify-content-center align-items-center"
-                >
-                  <div>
-                    <p className="font-40 text-capitalize fw-semibold">drone mini</p>
-                    <p className="font-14 text-uppercase mb-3">with 1 hour flight time</p>
-                    <p className="font-14 text-uppercase">starting at</p>
-                    <p className="font-30 text-uppercase  fw-semibold">$100.00</p>
-                  </div>
-                </Col>
-                <Col lg={8} className="d-flex justify-content-center">
                   <div className="mt-5">
                     <img src="/drone1.png" alt="" className="up_pro_img" />
                   </div>
                 </Col>
-              </div>
+              </div> */}
             </Slider>
           </Col>
         </Container>
