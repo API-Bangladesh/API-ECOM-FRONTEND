@@ -1,0 +1,126 @@
+@media (max-width: 992px) {
+  .all-side-icons {
+    font-size: 14px !important;
+  }
+  .brand-logo {
+    max-width: 80px;
+  }
+  .search-field {
+    position: absolute;
+    left: 30%;
+    width: 300px !important;
+  }
+  .form-item-btn {
+    position: absolute;
+    right: 275px;
+  }
+  .d-flex.align-items-center.border-end.pe-5.for_res {
+    display: block !important;
+  }
+  .delivery_icon {
+    margin-left: 18px;
+  }
+  .top_sale {
+    font-size: 24px !important;
+    padding-left: 0px !important;
+  }
+  .combo_img_bg {
+    height: 165px !important;
+    width: 115px !important;
+    object-fit: contain !important;
+  }
+  .categories .slider-primary .slick-list {
+    height: 115%;
+    overflow: hidden;
+  }
+  ul.stickyContent.list-unstyled.text-start.ps-5.font-20.lh-lg.card-border.py-3 {
+    padding-left: 0px !important ;
+  }
+}
+@media (max-width: 768px) {
+  .mx-auto.py-0.font-inter.manu-font.manu-items.nav,
+  .d-flex.justify-content-center.manu_drop {
+    display: none !important ;
+  }
+  .responsive_form {
+    display: flex !important;
+    align-items: center;
+  }
+  .brand-logo {
+    max-width: 80px;
+  }
+  button#dropdown-basic-button {
+    display: none;
+  }
+
+  .px-0.respon_icon.container-fluid {
+    position: absolute;
+    top: -37px;
+  }
+  .brand-logo {
+    padding-top: 10px;
+    padding-left: 10px;
+  }
+  .delivery_service {
+    display: none;
+  }
+  .banner .page_banner {
+    height: 290px;
+  }
+  .top_category::after {
+    display: none;
+  }
+  .top_sale_week {
+    justify-content: center;
+    padding-bottom: 50px;
+  }
+  .top_category {
+    text-align: center;
+  }
+  .border_in_phone {
+    border: 1px solid #666;
+  }
+  .slider-primary .slick-list {
+    height: 350px !important;
+  }
+  .up_pro_img {
+    height: 180px;
+  }
+  .upcoming_title{
+   font-size: 33px!important;
+   padding-top: 65px;
+  }
+  .company_logo{
+    margin-left: 50%;
+    transform: translate(-50%);
+  }
+
+  .d-flex.align-items-center.border-end.pe-5.for_res {
+    display: block !important;
+  }
+  .delivery_icon {
+    margin-left: 18px;
+  }
+  .top_sale {
+    font-size: 24px !important;
+    padding-left: 0px !important;
+  }
+  .combo_img_bg {
+    height: 165px !important;
+    width: 115px !important;
+    object-fit: contain !important;
+  }
+  .categories .slider-primary .slick-list {
+    height: 145%;
+    overflow: hidden;
+  }
+  ul.stickyContent.list-unstyled.text-start.ps-5.font-20.lh-lg.card-border.py-3 {
+    padding-left: 0px !important ;
+  }
+}
+@media (max-width: 576px){
+  .upcoming_title {
+    font-size: 30px!important;
+    padding-top: 65px;
+}
+}

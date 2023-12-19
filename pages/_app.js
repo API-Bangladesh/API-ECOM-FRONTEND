@@ -6,6 +6,7 @@ import "../styles/TopManu.css";
 import "../styles/Category.css";
 import "../styles/UpcomingProoduct.css";
 import "../styles/FeaturedProduct.css";
+import "../styles/Responsive.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "tailwindcss/tailwind.css";
 import "slick-carousel/slick/slick.css";

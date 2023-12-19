@@ -87,7 +87,7 @@ const ComboProductCard = ({
   return (
     <Card className={`c-shadow rounded-0 ${cssClasses}`}>
       <div className="combo-img-bg position-relative">
-        <Link href={viewLink}>
+        <Link href={viewLink} className="d-flex justify-content-center">
           <img
             src={imagePath}
             width={224}

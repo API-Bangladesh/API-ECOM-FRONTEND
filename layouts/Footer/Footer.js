@@ -105,8 +105,8 @@ export default function Footer() {
                 </div>
                 <div className="row py-3">
                   <div className="col-lg-3">
-                    <div className=" d-flex justify-content-start align-items-center">
-                      <Link href="https://apisolutionsltd.com/" target="_blank">
+                    <div className="d-flex justify-content-start align-items-center ">
+                      <Link href="https://apisolutionsltd.com/" target="_blank" className="company_logo">
                         <img
                             alt="logo"
                             src="/logo/api_logo.png"

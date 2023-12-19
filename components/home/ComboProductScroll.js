@@ -25,7 +25,7 @@ const ComboProductScroll = ({ title }) => {
     dots: false,
     infinite: true,
     speed: 2000,
-    autoplay: false,
+    autoplay: true,
     autoplaySpeed: 2500,
     slidesToShow: 4,
     slidesToScroll: 1,
@@ -84,11 +84,11 @@ const ComboProductScroll = ({ title }) => {
         <Container className="">
           <Row>
             <div className="col-lg-3 col-md-3">
-              <div className="d-flex align-items-center h-100">
+              <div className="d-flex align-items-center h-100 top_sale_week">
                 <div className="position-relative top_category">
-                  <p className="text-capitalize ps-4">featured</p>
-                  <h1 className="text-capitalize ps-4 font-30 fw-bold font-inter py-4">top sales this week</h1>
-                  <p className="text-capitalize ps-4">full catelog</p>
+                  <p className="text-capitalize">featured</p>
+                  <h1 className="text-capitalize font-30 fw-bold font-inter py-4 top_sale">top sales this week</h1>
+                  <p className="text-capitalize">full catelog</p>
                 </div>
               </div>
             </div>
@@ -96,7 +96,7 @@ const ComboProductScroll = ({ title }) => {
               <Slider {...settings}>
                 {combos.map((combo, key) => {
                   return (
-                    <div className="mt-0" key={key}>
+                    <div className="mt-0 border_in_phone" key={key}>
                       <div className="ms-3 me-3 mb-3">
                         <ComboProductCard
                           id={combo.id}
