@@ -77,9 +77,9 @@
   .top_category {
     text-align: center;
   }
-  .border_in_phone {
+  /* .border_in_phone {
     border: 1px solid #666;
-  }
+  } */
   .slider-primary .slick-list {
     height: 350px !important;
   }
