@@ -43,7 +43,7 @@ export default function Footer() {
                             <li className="nav-item">
                               {/* <div className="dropdown">
                                 <Link href="#"
-                                   className="my-0 me-1 py-0 nav-link-ifad dropdown-toggle d-flex justify-content-center align-items-center"
+                                   className="my-0 me-1 py-0 nav-link-api dropdown-toggle d-flex justify-content-center align-items-center"
                                    type="button" id="dropdownMenuButton1"
                                    data-bs-toggle="dropdown" aria-expanded="false">
                                   about us <BiChevronDown className="ms-1"/>
@@ -68,7 +68,7 @@ export default function Footer() {
                             <li className="nav-item">
                               <Link
                                   href="/privacy-policy"
-                                  className="nav-link-ifad"
+                                  className="nav-link-api"
                               >
                                 privacy & policy
                               </Link>
@@ -76,7 +76,7 @@ export default function Footer() {
                             <li className="nav-item">
                               <Link
                                   href="/terms-and-conditions"
-                                  className="nav-link-ifad"
+                                  className="nav-link-api"
                               >
                                 terms & conditions
                               </Link>
@@ -84,7 +84,7 @@ export default function Footer() {
                             <li className="nav-item">
                               <Link
                                   href="/refund-policy"
-                                  className="nav-link-ifad"
+                                  className="nav-link-api"
                               >
                                 refund policy
                               </Link>
@@ -92,7 +92,7 @@ export default function Footer() {
                             <li className="nav-item">
                               <Link
                                   href="/delivery-information"
-                                  className="nav-link-ifad"
+                                  className="nav-link-api"
                               >
                                 Delivery Information
                               </Link>
@@ -121,17 +121,17 @@ export default function Footer() {
                       <nav className="navbar navbar-expand-lg text-center">
                         <ul className="navbar-nav footer_manu_list">
                           <li className="nav-item footer-manu-item">
-                            <Link href="/auth/login" className="nav-link-ifad">
+                            <Link href="/auth/login" className="nav-link-api">
                               login
                             </Link>
                           </li>
                           <li className="nav-item footer-manu-item">
-                            <Link href="/checkout" className="nav-link-ifad">
+                            <Link href="/checkout" className="nav-link-api">
                               checkout
                             </Link>
                           </li>
                           <li className="nav-item footer-manu-item">
-                            <Link href="/my-account" className="nav-link-ifad">
+                            <Link href="/my-account" className="nav-link-api">
                               my account
                             </Link>
                           </li>
